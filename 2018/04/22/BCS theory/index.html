@@ -8,6 +8,16 @@
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -72,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Quantum Theory," />
+  <meta name="keywords" content="Solid State Physics,Quantum Theory," />
 
 
 
@@ -84,14 +94,14 @@
 
 
 <meta name="description" content="中岛变换的技巧有相互作用的电子-声子系统的哈密顿量如下：\begin{align}H_0=&amp;amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;amp;\\+&amp;amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma}">
-<meta name="keywords" content="Quantum Theory">
+<meta name="keywords" content="Solid State Physics,Quantum Theory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BCS theory">
 <meta property="og:url" content="http://lonelybsh.github.io/2018/04/22/BCS theory/index.html">
 <meta property="og:site_name" content="呆头鹅の学习日常">
 <meta property="og:description" content="中岛变换的技巧有相互作用的电子-声子系统的哈密顿量如下：\begin{align}H_0=&amp;amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;amp;\\+&amp;amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma}">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T04:11:52.517Z">
+<meta property="og:updated_time" content="2018-05-27T05:55:01.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BCS theory">
 <meta name="twitter:description" content="中岛变换的技巧有相互作用的电子-声子系统的哈密顿量如下：\begin{align}H_0=&amp;amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;amp;\\+&amp;amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma}">
@@ -244,10 +254,10 @@
 
 <script type="text/javascript">
     window.onblur = function () {
-        document.title = "(●′ω`●)小小少年，很少烦恼~";
+        document.title = "(●′ω`●)小小少年，很少烦恼~眼望四周阳光照~";
     };
     window.onfocus = function () {
-        document.title = "( ´◔ ‸◔')岁月如刀斩天骄";
+        document.title = "( ´◔ ‸◔')一年一年时间飞跑~小小少年在长高~";
     }
 </script>
 
@@ -364,9 +374,14 @@
       
 
       
-        <h3 id="中岛变换的技巧"><a href="#中岛变换的技巧" class="headerlink" title="中岛变换的技巧"></a>中岛变换的技巧</h3><p>有相互作用的电子-声子系统的哈密顿量如下：<br>\begin{align}<br>H_0=&amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;\\<br>+&amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q+h.c.&amp;<br>\end{align}<br>选择合适的母函数$S$，做变换$H_S=e^{-S}He^{S}$，然后利用<a href="https://en.wikipedia.org/wiki/Baker_Campbell_Hausdorff_formula" target="_blank" rel="noopener">Baker–Campbell–Hausdorff</a>公式：<br>\begin{align}<br>H_S&amp;=H+[H,S]+\frac{1}{2}[[H,S],S]+\cdots&amp;\\<br>&amp;=H_0+(H_1+[H_0,S])+\frac{1}{2}[(H_1+[H_0,S]),S]+\frac{1}{2}[H_1,S]+\cdots&amp;<br>\end{align}<br>令$H_1+[H_0,S]=0$，消去电子-声子的一阶相互作用，然后准确讨论至$H_1$的二阶哈密顿量$H_S=H_0+\frac{1}{2}[H_1,S]$</p>
-<p>设$S = \sum_{q,k,\sigma} {\Phi (k,q)} c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q + h.c$</p>
-<h3 id="BCS哈密顿量的对角化"><a href="#BCS哈密顿量的对角化" class="headerlink" title="BCS哈密顿量的对角化"></a>BCS哈密顿量的对角化</h3>
+        <h3 id="中岛变换的技巧"><a href="#中岛变换的技巧" class="headerlink" title="中岛变换的技巧"></a>中岛变换的技巧</h3><p>有相互作用的电子-声子系统的哈密顿量如下：<br>\begin{align}<br>H_0=&amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;\\<br>+&amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q+h.c.&amp;<br>\end{align}<br>选择合适的母函数$S$，做变换$H_S=e^{-S}He^{S}$，然后利用<a href="https://en.wikipedia.org/wiki/Baker_Campbell_Hausdorff_formula" target="_blank" rel="noopener">Baker–Campbell–Hausdorff</a>公式：<br><a id="more"></a><br>\begin{align}<br>H_S&amp;=H+[H,S]+\frac{1}{2}[[H,S],S]+\cdots&amp;\\<br>&amp;=H_0+(H_1+[H_0,S])+\frac{1}{2}[(H_1+[H_0,S]),S]+\frac{1}{2}[H_1,S]+\cdots&amp;<br>\end{align}<br>令$H_1+[H_0,S]=0$，消去电子-声子的一阶相互作用，然后准确讨论至$H_1$的二阶哈密顿量$H_S=H_0+\frac{1}{2}[H_1,S]$</p>
+<p>设$S=\sum_{q,k,\sigma} \Phi (k,q) c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q + h.c$</p>
+<p>\begin{align}<br>\small H_1+i[H_0,S]=&amp;\small\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q+h.c. + i [\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k , \sum_{q,k,\sigma} {\Phi (k,q)} c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q + h.c]&amp;\\<br>=&amp;\sum_q \sum_{k\sigma} [i\Phi(k,q)(\varepsilon_{k+q}-\varepsilon_k-\hbar\omega_q)+D_q] c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q + h.c&amp;\\<br>=&amp;0&amp;<br>\end{align}<br>故只需令$\Phi(k,q)=\frac{iD_q}{\varepsilon_{k+q}-\varepsilon_k-\hbar\omega_q}$。<br>若直接计算对易子，得到的结果包含了$a^{\dagger}_q a_q,a^{\dagger}_q a^{\dagger}_q,a_q a_q$(声子自能修正，双声子过程项)和$c^{\dagger}_{k,\sigma} c_{k,\sigma}$的电子自能修正项以及$c^{\dagger}_{k+q,\sigma} c^{\dagger}_{k^\prime-q,\sigma^\prime} c_{k^\prime\sigma^\prime} c_{k\sigma}$型的电子间有效相互作用项。为选出$H_{\rm eff}$，可在声子真空态求平均，然后去掉电子自能修正。<br>\begin{align}<br>H_{\rm eff}=&amp;\left\langle 0 \right|\frac{1}{2}i[{H_1},S]\left| 0 \right\rangle&amp;\\<br>=&amp;\frac{1}{2}i\sum_q {\left\langle 0 \right|H_1\left| 1_q \right\rangle \left\langle 1_q \right|S\left| 0 \right\rangle} - {\left\langle 0 \right|S\left| 1_q \right\rangle \left\langle 1_q \right|H_1\left| 0 \right\rangle}&amp;\\<br>=&amp;\sum_{k\sigma,k^\prime\sigma^\prime,q} \frac{ \left| D_q \right| ^2 \hbar\omega}{(\varepsilon_{k+q}-\varepsilon _k)^2-(\hbar\omega_q)^2} c^{\dagger}_{k+q,\sigma} c^{\dagger}_{k^\prime-q,\sigma^\prime} c_{k^\prime\sigma^\prime} c_{k\sigma}&amp;<br>\end{align}</p>
+<h3 id="BCS哈密顿量的对角化"><a href="#BCS哈密顿量的对角化" class="headerlink" title="BCS哈密顿量的对角化"></a>BCS哈密顿量的对角化</h3><p>在费米面附近$|\varepsilon_{k+q}-\varepsilon_k|&lt;\hbar\omega_q\approx\hbar\omega_D$的能壳内有吸引作用，这里$\omega_D$为德拜频率。吸引区可以近似用一个厚度为$2\hbar\omega_D$的固定能壳代替。Bardeen等认为该能壳外排斥作用可以忽略，而能壳内净吸引可近似为常数，相当于取各项同性的s波散射。<br>在散射的电子对中，一对自旋和动量都相反的电子对吸引作用贡献最大。BCS约化哈密顿量可表示为：<br>\begin{align}<br>H=\sum_k \eta_k (c^{\dagger}_k c_k+c^{\dagger}_{-k} c_{-k}) + \frac{g}{V}\sum_k c^{\dagger}_k c^{\dagger}_{-k} c_{-k} c_k \quad \eta_k=\varepsilon_k-\mu<br>\end{align}<br>作平均场近似$\frac{g}{V}\sum_k \left\langle c_{-k} c_k \right\rangle =\Delta,\frac{g}{V}\sum_k \left\langle c^{\dagger}_k c^{\dagger}_{-k} \right\rangle =\Delta^*$</p>
+<p>\begin{align}<br>H=\sum_k \eta_k (c^{\dagger}_k c_k+c^{\dagger}_{-k} c_{-k}) - \sum_k \Delta c^{\dagger}_k c^{\dagger}_{-k} + \Delta^* c_{-k} c_k + \frac{V}{g}|\Delta|^2<br>\end{align}</p>
+<p>引入Nambu旋量$\phi=\left( \begin{array}{c} c_k \\c^{\dagger}_{-k}\end{array} \right)$，可得<br>\begin{align}<br>H=\sum_k \phi^{\dagger} M \phi - \sum_k \eta_k + \frac{V}{g}|\Delta|^2<br>\end{align}</p>
+<p>\begin{align}<br>M=\left( \begin{matrix}<br>\eta_k&amp;-\Delta\\<br>-\Delta^*&amp;-\eta_k<br>\end{matrix} \right)<br>\end{align}</p>
+
       
     </div>
     
@@ -382,6 +397,8 @@
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/tags/Solid-State-Physics/" rel="tag"># Solid State Physics</a>
           
             <a href="/tags/Quantum-Theory/" rel="tag"># Quantum Theory</a>
           
@@ -405,6 +422,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/28/转载的学习笔记（自用）/" rel="prev" title="转载的学习笔记（自用）">
+                转载的学习笔记（自用） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -485,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -507,7 +528,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

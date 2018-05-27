@@ -8,6 +8,16 @@
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -91,7 +101,7 @@
 <meta property="og:site_name" content="呆头鹅の学习日常">
 <meta property="og:description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-08T04:30:09.016Z">
+<meta property="og:updated_time" content="2018-05-10T08:52:36.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="路径积分专题">
 <meta name="twitter:description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
@@ -244,10 +254,10 @@
 
 <script type="text/javascript">
     window.onblur = function () {
-        document.title = "(●′ω`●)小小少年，很少烦恼~";
+        document.title = "(●′ω`●)小小少年，很少烦恼~眼望四周阳光照~";
     };
     window.onfocus = function () {
-        document.title = "( ´◔ ‸◔')岁月如刀斩天骄";
+        document.title = "( ´◔ ‸◔')一年一年时间飞跑~小小少年在长高~";
     }
 </script>
 
@@ -370,8 +380,7 @@
 </blockquote>
 <p>体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。<br>经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{\partial L}{\partial q} = 0$。</p>
 <p>用$x(t)$表示相对 $q_{cl}(t)$的扰动，则体系的路径可表示为：</p>
-<p>\begin{gather}<br>q(t)=q_{cl}(t)+x(t)<br>\end{gather}</p>
-<p>\begin{gather}<br>\dot q(t)=\dot q_{cl}(t)+\dot x(t)<br>\end{gather}</p>
+<p>\begin{align}<br>q(t)&amp;=q_{cl}(t)+x(t)&amp;\<br>\dot q(t)&amp;=\dot q_{cl}(t)+\dot x(t)&amp;<br>\end{align}</p>
 
       
     </div>
@@ -486,7 +495,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -508,7 +517,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
