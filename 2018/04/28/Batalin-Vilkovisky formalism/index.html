@@ -10,8 +10,8 @@
   <meta charset="UTF-8"/>
 <script>
     (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
+        if('note'){
+            if (prompt('请输入文章密码') !== 'note'){
                 alert('密码错误');
                 history.back();
             }
@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Quantum Theory," />
+  <meta name="keywords" content="Quantum Theory of Fields," />
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
-<meta name="keywords" content="Quantum Theory">
+<meta name="description" content="Batalin-Vilkovisky formalism">
+<meta name="keywords" content="Quantum Theory of Fields">
 <meta property="og:type" content="article">
-<meta property="og:title" content="路径积分专题">
-<meta property="og:url" content="http://lonelybsh.github.io/2018/01/22/Path Integral/index.html">
+<meta property="og:title" content="转载的学习笔记（四）">
+<meta property="og:url" content="http://lonelybsh.github.io/2018/04/28/Batalin-Vilkovisky formalism/index.html">
 <meta property="og:site_name" content="呆头鹅の学习日常">
-<meta property="og:description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
+<meta property="og:description" content="Batalin-Vilkovisky formalism">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-10T08:52:36.497Z">
+<meta property="og:updated_time" content="2018-06-20T15:07:09.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="路径积分专题">
-<meta name="twitter:description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
+<meta name="twitter:title" content="转载的学习笔记（四）">
+<meta name="twitter:description" content="Batalin-Vilkovisky formalism">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://lonelybsh.github.io/2018/01/22/Path Integral/"/>
+  <link rel="canonical" href="http://lonelybsh.github.io/2018/04/28/Batalin-Vilkovisky formalism/"/>
 
 
 
 
 
-  <title>路径积分专题 | 呆头鹅の学习日常</title>
+  <title>转载的学习笔记（四） | 呆头鹅の学习日常</title>
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/01/22/Path Integral/">
+    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/04/28/Batalin-Vilkovisky formalism/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="呆头鹅">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">路径积分专题</h1>
+          <h1 class="post-title" itemprop="name headline">转载的学习笔记（四）</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T00:00:00+08:00">
-                2018-01-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-28T00:00:00+08:00">
+                2018-04-28
               </time>
             
 
@@ -374,13 +374,22 @@
       
 
       
-        <p>$\textbf{1.平方型拉氏量}$</p>
-<blockquote>
-<p>$$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$</p>
-</blockquote>
-<p>体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。<br>经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{\partial L}{\partial q} = 0$。</p>
-<p>用$x(t)$表示相对 $q_{cl}(t)$的扰动，则体系的路径可表示为：</p>
-<p>\begin{align}<br>q(t)&amp;=q_{cl}(t)+x(t)&amp;\<br>\dot q(t)&amp;=\dot q_{cl}(t)+\dot x(t)&amp;<br>\end{align}</p>
+        <h3 id="Batalin-Vilkovisky-formalism"><a href="#Batalin-Vilkovisky-formalism" class="headerlink" title="Batalin-Vilkovisky formalism"></a><a href="https://www.zhihu.com/question/268748919" target="_blank" rel="noopener">Batalin-Vilkovisky formalism</a></h3><a id="more"></a>
+<p>首先BV formalism是Lagrangian方法，要区别于基于Hamiltonian的BFV(F是E. S. Fradkin).数学上来看基本就是homological微扰论。 从操作上来看大概分为两步，我先用物理语言简单说一下，再说数学idea.物理上来看，对于某个场论，首先记模空间为$\mathcal{M}$，包含场和场的导数的所有可能构型。<br>第一步：通过运动方程欧拉-拉格朗日定义出$\mathcal{M}$的子空间$\mathcal{\Sigma}$，也叫stationary space;<br>第二步：关于场论的动力学，我们关心在壳物理量，所以在$\mathcal{\Sigma}$上定义在壳函数，它们构成$\mathbb{C}^{\infty}(\Sigma)=\mathbb{C}^{\infty}(\mathcal{M})/\mathcal{N}$，其中$\mathcal{N}$是理想，由在$\mathcal{\Sigma}$上值为零的函数组成。这一步quotient相当于模掉了gauge redundancy, 因为运动方程满足一些诺特关系。</p>
+<p>数学上，即BV formalism里，这两步分别由Koszul-Tate differential $\delta$ 的同调以及longitudinal operator $\gamma$ 的上同调来描述。<br>$\delta$ 在同调中中给出了运动方程的resolution. 具体一些：在拉氏量中，我们对每个场 $\phi^i$ 都引入反场 $\phi_i^* $，它保证运动方程在 $\delta$ 同调中trivial;<br>$\gamma$ 上同调在熟悉的Yang-Mills中等价于李代数上同调。</p>
+<p>有了 $\delta$ 和 $\gamma$ ，我们就能借助homological微扰论来定义BV算子 $s=\delta+\gamma+\cdots$ ，因为是微扰论， $\delta$ 和 $\gamma$ 满足一些迭代关系，其中 $\cdots$ 是为了让 $s^2=0$ 而必须加的项（比如当规范代数open时；而对于Yang-Mills, 因为规范代数不借助运动方程就close, 所以我们不用加$\cdots$）。具体地，我们需要定义著名的反括号（antibracket），大概是把泊松括号里的加号变成减号。在反括号 $(\cdot,\cdot)$ 下，每个场和其反场互为对偶。对于给定的源 $S$ 以及任意泛函 $F(\phi^i,\phi_i^*)$，BV算子即定义为$sF=(S,F)$ . 而经典主方程为 $(S,S)=0$ ，等价于 $s^2=0$ .</p>
+<p>在量子层面上，作用量要得到修正 $W=S+\sum_{i}\hbar^iM_i$ ，然后算子VEV的规范不变性等价于量子主方程 $\frac{1}{2}(W,W)=i\hbar\Delta W$ ，其中 $\Delta$ 是定义在场和反场空间上类似拉普拉斯的算子。当 $\Delta S=0$ 时，可以取 $W=S$ .</p>
+<p>现在总结一下BV中数学和物理的关系：</p>
+<ul>
+<li>规范不变的可测量通过ghost数为零的上同调群 $H^*(s)$ 来描述；</li>
+<li>守恒流等价于反场数为零时的特征上同调 $H^{0,n-1}_0(\delta|d)$ ，即 $\delta$ 的上同调对 $(n-1)$ -形式模掉全微分，其中 $n$ 是时空维数；</li>
+<li>全局对称的等价类就是 $H^{0,n}_1(\delta|d)$ ;</li>
+<li>规范反常受控于$H^{1,n}(s|d)$，即反场数为1的 $H^*(s)$ 对所有 $n$ -形式模掉全微分。物理上， $H^{1,n}(s|d)$ 的定义受限于推广后的Wess-Zumino自洽条件；</li>
+<li>$H^{0,n}(s|d)$ 包含了该场论的重整化以及所有counter-term的信息；$H^{0,n}(\gamma,d)$ 和 $H^{1,n}(\gamma,d)$ 描述该理论所有可能的deformation.</li>
+</ul>
+<p>应用方面，BV因为不需要做gauge-fixing所以很受欢迎，主要用途基本就是上述bullet points里的那些：用于找出量子反常与守恒流，以及用于BRST失效的情形，比如当规范代数open时（即只有模掉运动方程后才close）的量子化，例如超引力。数学上可以用来得到topological CFT的Gromov-Witten potential, 比如Costello这篇<a href="https://arxiv.org/abs/math/0509264" target="_blank" rel="noopener">The Gromov-Witten potential associated to a TCFT</a>。其它和镜对称的关系我就不太清楚了。</p>
+<p>PS: 这个话题太大了，细节也海量，之后有空来补。除了两篇原文之外，推荐几个不错的references: <a href="https://arxiv.org/abs/hep-th/0506098" target="_blank" rel="noopener">A. Fustera, M. Henneaux and A. Maas,BRST-antifield Quantization: a Short Review</a><br><a href="https://www.worldscientific.com/doi/abs/10.1142/S0217732390000561" target="_blank" rel="noopener">E. Witten, A Note on the Antibracket Formalism</a>，首次给出了反场，反括号和 $\Delta$ 的几何解释，文章主体只有5页，非常推荐！<a href="https://arxiv.org/abs/hep-th/9205088" target="_blank" rel="noopener">A. Schwarz, Geometry of Batalin-Vilkovisky quantization</a><br>楼上说的Weinberg第二卷的15.9章也不错，比较物理；另外17.1-17.3章是BV在Zinn-Justin方程以及重整化中的应用；<br>几乎整本经典教材：Henneaux和Teitelboim的<a href="https://press.princeton.edu/titles/5156.html" target="_blank" rel="noopener">Quantization of Gauge Systems</a>，之前提到的 $d,\delta,s$ 都有详细介绍。</p>
+<p>PPS: 题主如果对quantization非常感兴趣的话，推荐入坑一种升级版的几何量子化–膜量子化:)  见Gukov-Witten的<a href="https://arxiv.org/abs/0809.0305" target="_blank" rel="noopener">Branes and Quantization</a>和Gukov的<a href="https://arxiv.org/abs/1011.2218" target="_blank" rel="noopener">Quantization via Mirror Symmetry</a><br>BV代数与Gerstenhaber代数一起还跟1999年Chas和Sullivan定义的<a href="https://arxiv.org/abs/math/9911159" target="_blank" rel="noopener">string topology</a>有密切关系，我一点也不懂。</p>
 
       
     </div>
@@ -398,7 +407,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Quantum-Theory/" rel="tag"># Quantum Theory</a>
+            <a href="/tags/Quantum-Theory-of-Fields/" rel="tag"># Quantum Theory of Fields</a>
           
         </div>
       
@@ -411,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/21/Website/" rel="next" title="公开课">
-                <i class="fa fa-chevron-left"></i> 公开课
+              <a href="/2018/04/22/BCS theory/" rel="next" title="BCS theory">
+                <i class="fa fa-chevron-left"></i> BCS theory
               </a>
             
           </div>
@@ -421,8 +430,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/22/BCS theory/" rel="prev" title="BCS theory">
-                BCS theory <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/28/量子多体理论：非对角长程序/" rel="prev" title="转载的学习笔记（二）">
+                转载的学习笔记（二） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -475,8 +484,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -556,6 +574,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Batalin-Vilkovisky-formalism"><span class="nav-number">1.</span> <span class="nav-text">Batalin-Vilkovisky formalism</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

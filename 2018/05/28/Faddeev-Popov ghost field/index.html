@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Solid State Physics,Quantum Theory of Fields," />
+  <meta name="keywords" content="Quantum Theory of Fields," />
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="Faddeev-Popov ghost fieldAuthor：$\textbf{Tom Gao}$ 现代场论中，人们通过在拉格朗日量的规范不变性来引入规范场。路径积分表述下，有生成泛函$$Z[J]=\int\mathcal{D}A_{\mu}\exp{i\int(\mathcal{L}+J^{\mu}A_{\mu})}$$其中电磁场的经典拉格朗日量写为$\mathcal{L}=-\frac{1}">
-<meta name="keywords" content="Solid State Physics,Quantum Theory of Fields">
+<meta name="description" content="Faddeev-Popov ghost field">
+<meta name="keywords" content="Quantum Theory of Fields">
 <meta property="og:type" content="article">
-<meta property="og:title" content="转载的学习笔记（自用）">
-<meta property="og:url" content="http://lonelybsh.github.io/2018/04/28/转载的学习笔记（自用）/index.html">
+<meta property="og:title" content="转载的学习笔记（三）">
+<meta property="og:url" content="http://lonelybsh.github.io/2018/05/28/Faddeev-Popov ghost field/index.html">
 <meta property="og:site_name" content="呆头鹅の学习日常">
-<meta property="og:description" content="Faddeev-Popov ghost fieldAuthor：$\textbf{Tom Gao}$ 现代场论中，人们通过在拉格朗日量的规范不变性来引入规范场。路径积分表述下，有生成泛函$$Z[J]=\int\mathcal{D}A_{\mu}\exp{i\int(\mathcal{L}+J^{\mu}A_{\mu})}$$其中电磁场的经典拉格朗日量写为$\mathcal{L}=-\frac{1}">
+<meta property="og:description" content="Faddeev-Popov ghost field">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-20T14:45:47.918Z">
+<meta property="og:updated_time" content="2018-06-20T15:05:46.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="转载的学习笔记（自用）">
-<meta name="twitter:description" content="Faddeev-Popov ghost fieldAuthor：$\textbf{Tom Gao}$ 现代场论中，人们通过在拉格朗日量的规范不变性来引入规范场。路径积分表述下，有生成泛函$$Z[J]=\int\mathcal{D}A_{\mu}\exp{i\int(\mathcal{L}+J^{\mu}A_{\mu})}$$其中电磁场的经典拉格朗日量写为$\mathcal{L}=-\frac{1}">
+<meta name="twitter:title" content="转载的学习笔记（三）">
+<meta name="twitter:description" content="Faddeev-Popov ghost field">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://lonelybsh.github.io/2018/04/28/转载的学习笔记（自用）/"/>
+  <link rel="canonical" href="http://lonelybsh.github.io/2018/05/28/Faddeev-Popov ghost field/"/>
 
 
 
 
 
-  <title>转载的学习笔记（自用） | 呆头鹅の学习日常</title>
+  <title>转载的学习笔记（三） | 呆头鹅の学习日常</title>
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/04/28/转载的学习笔记（自用）/">
+    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/05/28/Faddeev-Popov ghost field/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="呆头鹅">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">转载的学习笔记（自用）</h1>
+          <h1 class="post-title" itemprop="name headline">转载的学习笔记（三）</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-28T00:00:00+08:00">
-                2018-04-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T00:00:00+08:00">
+                2018-05-28
               </time>
             
 
@@ -374,26 +374,22 @@
       
 
       
-        <h3 id="Faddeev-Popov-ghost-field"><a href="#Faddeev-Popov-ghost-field" class="headerlink" title="Faddeev-Popov ghost field"></a>Faddeev-Popov ghost field</h3><p>Author：$\textbf{Tom Gao}$</p>
+        <h3 id="Faddeev-Popov-ghost-field"><a href="#Faddeev-Popov-ghost-field" class="headerlink" title="Faddeev-Popov ghost field"></a>Faddeev-Popov ghost field</h3><a id="more"></a>
+<p>Author：$\textbf{Tom Gao}$</p>
 <p>现代场论中，人们通过在拉格朗日量的规范不变性来引入规范场。路径积分表述下，有生成泛函<br>$$<br>Z[J]=\int\mathcal{D}A_{\mu}\exp{i\int(\mathcal{L}+J^{\mu}A_{\mu})}<br>$$<br>其中电磁场的经典拉格朗日量写为$\mathcal{L}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\;\;,\;\;F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$<br>可检验在规范变换$A’_\mu(x)\to A_\mu(x)+\partial_\mu\chi$下不变。</p>
 <p>要计算这个泛函积分，就要求运动方程算符存在逆，就如标量玻色场的运动方程存在逆而得到Green函数<br>$$<br>(\partial^2+m^2-i0^+)D_F(x)=-\delta^4(x)<br>$$<br>对于规范场积掉场量后得到<br>$$<br>\mathcal{L}=\frac{1}{2}A^\mu[g_{\mu\nu}\partial^2-\partial_\mu\partial_\nu]A^\nu<br>$$<br>可得到<br>$$<br>(g_{\mu\nu}\partial^2-\partial_\mu\partial_\nu)D^{\nu\lambda}(x-y)=\delta^\lambda_\mu\delta^4(x-y)<br>$$<br>因为拉格朗日量在规范不变下可差一个四维散度，即拉格朗日量又可构造为<br>$$<br>\mathcal{L}=\frac{1}{2}A^\mu(\partial_\mu\partial_\nu-g_{\mu\nu}\partial^2)A^\nu<br>$$<br>传播子是算符的逆，但可以从冗余的散度项得到<br>$$<br>(\partial^\mu\partial^\nu-g^{\mu\nu}\partial^2)\partial_\mu\chi=(\partial^2\partial^\nu-\partial^2\partial^\mu)\chi=0<br>$$<br>意味着算符具有零本征值，是没有逆的。</p>
 <p>该困难来源于规范变换带来无穷多自由度，这在计算泛函积分的时候会对生成泛函$W$以及由它生成的Green函数产生无穷大贡献而导致发散；要避免的话只能固定规范，把规范约束条件带入到泛函积分中去。</p>
-<p>以一个例子来说明这是如何办到的，考虑一个Gauss积分<br>$$<br>I=\int\int dx\;dy\;e^{-(x^2+y^2)}<br>$$<br>在旋转变换下不变（对应于$U(1)$对称性）<br>变换到极坐标下<br>$$<br>I=\int d\theta\int dr\;r e^{-r^2}<br>$$<br>由于旋转对称性产生的冗余角度部分自由度就积掉变成一个无关紧要的常数因子（我们希望在做路径积分计算时也如此）。这时候可以等价地将积分写成<br>$$<br>I=\int d\theta\int dr\;r e^{-r^2}\delta(\theta)<br>$$<br>即选取一条固定的路径$\theta=0$；可以推广到其它非零$\theta$的路径，如 $y\cos\theta=x\sin\theta$。在路径积分里面路径函数即为<br>$$<br>f(\theta)=y\cos\theta-x\sin\theta=0<br>$$<br>$f$的零点就是$\theta_1=\tan^{-1}(y/x)$，$\theta_2=\pi+\tan^{-1}(y/x)$，因此<br>$$<br>\begin{aligned}<br>\delta(f(\theta))&amp;=\sum_i\Bigg|\frac{\partial f(\theta_i)}{\partial\theta}\Bigg|^{-1}\delta(\theta-\theta_i)\\<br>\frac{\partial f}{\partial\theta}\Bigg|_{\theta_1,\theta_2}&amp;=-r=-\sqrt{x^2+y^2}\\<br>&amp;\Rightarrow\delta(f(\theta))=\frac{1}{r}[\delta(\theta-\theta_1)+\delta(\theta-\theta_2)]<br>\end{aligned}<br>$$<br>那么原来的Gauss积分就变为<br>$$<br>\int\delta(f(\theta))d\theta=\frac{2}{r}=\frac{2}{\sqrt{x^2+y^2}}<br>$$<br>为了抵消掉这额外的因子，引入一个新的函数$\Delta(r)=\Delta(\sqrt{x^2+y^2})=\frac{1}{2}\sqrt{x^2+y^2}$ 使得<br>$$<br>\Delta(r)\int\delta(f(\theta))d\theta=1<br>$$<br>在这个例子里面，$f$ 就是一个简单的$O(2)$转动函数</p>
-<p>\begin{align}<br>&amp;y’=y\cos\theta-x\sin\theta\<br>&amp;x’=x\cos\theta+y\sin\theta<br>\end{align}</p>
-<p>于是有<br>$$<br>\Delta(\sqrt{x’^2+y’^2})\int\delta(y’)d\theta=1<br>$$<br>该恒等式成立，Gauss积分又写为<br>$$<br>I=\int d\theta\int dx’\;dy’\;e^{-(x’^2+y’^2)}\Delta(\sqrt{x’^2+y’^2})\delta(y’)<br>$$<br>$\Delta$函数作用是隔离掉体积因子，其逆为<br>$$<br>\Delta^{-1}(r)=\int\delta(f(\theta))d\theta=\int\delta(f(\theta))\det\Bigg|\frac{d\theta}{df}\Bigg|=\det\Bigg|\frac{d\theta}{df}\Bigg|_{f=0}<br>$$<br>因此 $\Delta(r)=\det\Big|\frac{d\theta}{df}\Big|_{f=0}$</p>
-<p>接下来我们将用类似的手段来讲冗余的规范对称性去掉。已知作用量在(局域)规范变换下不变<br>$$<br>A_\mu^U=UA_\mu U^\dagger-i(\partial_\mu U)U^\dagger<br>\;\;\;,\;\;\;<br>U=e^{i\vartheta^a(x)T^a}<br>$$<br>$T^a$是规范变换群（通常为紧致Lie群）的生成元，群的结构常数为$[T^a,T^b]=i\;f^{abc}T^c$。<br>无穷小极限下有<br>$$<br>{A’}_\mu^a=A_\mu^a+f^{abc}A_\mu^b\vartheta^c+\partial_\mu\vartheta^a<br>$$<br>为了移除无穷多的冗余规范自由度，我们要给出规范条件进行规范固定 $F^a[A_\mu]=0$ ；例如Lorenz规范 $F=\partial^\mu A_\mu$ 。</p>
+<p>以一个例子来说明这是如何办到的，考虑一个Gauss积分<br>$$<br>I=\int\int dx\;dy\;e^{-(x^2+y^2)}<br>$$<br>在旋转变换下不变（对应于$U(1)$对称性）<br>变换到极坐标下<br>$$<br>I=\int d\theta\int dr\;r e^{-r^2}<br>$$<br>由于旋转对称性产生的冗余角度部分自由度就积掉变成一个无关紧要的常数因子（我们希望在做路径积分计算时也如此）。这时候可以等价地将积分写成<br>$$<br>I=\int d\theta\int dr\;r e^{-r^2}\delta(\theta)<br>$$<br>即选取一条固定的路径$\theta=0$；可以推广到其它非零$\theta$的路径，如 $y\cos\theta=x\sin\theta$。在路径积分里面路径函数即为<br>$$<br>f(\theta)=y\cos\theta-x\sin\theta=0<br>$$<br>$f$的零点就是$\theta_1=\tan^{-1}(y/x)$，$\theta_2=\pi+\tan^{-1}(y/x)$，因此<br>$$<br>\begin{aligned}<br>\delta(f(\theta))&amp;=\sum_i\Bigg|\frac{\partial f(\theta_i)}{\partial\theta}\Bigg|^{-1}\delta(\theta-\theta_i)\\<br>\frac{\partial f}{\partial\theta}\Bigg|_{\theta_1,\theta_2}&amp;=-r=-\sqrt{x^2+y^2}\\<br>&amp;\Rightarrow\delta(f(\theta))=\frac{1}{r}[\delta(\theta-\theta_1)+\delta(\theta-\theta_2)]<br>\end{aligned}<br>$$<br>那么原来的Gauss积分就变为<br>$$<br>\int\delta(f(\theta))d\theta=\frac{2}{r}=\frac{2}{\sqrt{x^2+y^2}}<br>$$<br>为了抵消掉这额外的因子，引入一个新的函数$\Delta(r)=\Delta(\sqrt{x^2+y^2})=\frac{1}{2}\sqrt{x^2+y^2}$ 使得<br>$$<br>\Delta(r)\int\delta(f(\theta))d\theta=1<br>$$<br>在这个例子里面，$f$ 就是一个简单的$O(2)$转动函数<br>\begin{align}<br>&amp;y’=y\cos\theta-x\sin\theta\<br>&amp;x’=x\cos\theta+y\sin\theta<br>\end{align}<br>于是有<br>$$<br>\Delta(\sqrt{x’^2+y’^2})\int\delta(y’)d\theta=1<br>$$<br>该恒等式成立，Gauss积分又写为<br>$$<br>I=\int d\theta\int dx’\;dy’\;e^{-(x’^2+y’^2)}\Delta(\sqrt{x’^2+y’^2})\delta(y’)<br>$$<br>$\Delta$函数作用是隔离掉体积因子，其逆为<br>$$<br>\Delta^{-1}(r)=\int\delta(f(\theta))d\theta=\int\delta(f(\theta))\det\Bigg|\frac{d\theta}{df}\Bigg|=\det\Bigg|\frac{d\theta}{df}\Bigg|_{f=0}<br>$$<br>因此 $\Delta(r)=\det\Big|\frac{d\theta}{df}\Big|_{f=0}$<br>接下来我们将用类似的手段来讲冗余的规范对称性去掉。已知作用量在(局域)规范变换下不变<br>$$<br>A_\mu^U=UA_\mu U^\dagger-i(\partial_\mu U)U^\dagger<br>\;\;\;,\;\;\;<br>U=e^{i\vartheta^a(x)T^a}<br>$$<br>$T^a$是规范变换群（通常为紧致Lie群）的生成元，群的结构常数为$[T^a,T^b]=i\;f^{abc}T^c$。<br>无穷小极限下有<br>$$<br>{A’}_\mu^a=A_\mu^a+f^{abc}A_\mu^b\vartheta^c+\partial_\mu\vartheta^a<br>$$<br>为了移除无穷多的冗余规范自由度，我们要给出规范条件进行规范固定 $F^a[A_\mu]=0$ ；例如Lorenz规范 $F=\partial^\mu A_\mu$ 。</p>
 <p>像之前那样，引入一个$\Delta$函数<br>$$<br>\Delta^{-1}[A_\mu]=\int\mathcal{D}U\;\delta[F^a[A_\mu^U］<br>$$<br>其中$\delta$函数是乘积结构，定义了泛函积分中时空每点的规范场$A$<br>$$<br>\delta[F^a[A_\mu^U］=\prod_{x^\mu,a}\delta(F^a[A(x_\mu)])<br>$$<br>$\Delta$函数也必须是规范不变的，因此作额外规范变换$U’$有<br>$$<br>\Delta^{-1}[A_\mu^{U’}]=\int\mathcal{D}U\;\delta[F^a[A_\mu^{U’U}］<br>$$<br>群空间中的体积元是规范不变的（规范不变测度）$\mathcal{D}U=\mathcal{D}U’’<br>\;\;\;,\;\;\;<br>U’’=U’U$<br>因此可重新表达<br>$$<br>\Delta^{-1}[A_\mu^{U’}]=\int\mathcal{D}U’’\;\delta[F^a[A_\mu^{U’’U}］=\Delta^{-1}[A_\mu]<br>$$<br>这就是规范不变性的体现。可得到恒等式<br>$$<br>\Delta[A_\mu]\int\mathcal{D}U\;\delta[F^a[A_\mu^U］=1<br>$$<br>插入到规范场的路径积分中<br>$$<br>Z=\int\mathcal{D}A_{\mu}\;\Delta[A_\mu]\int\mathcal{D}U\;\delta[F^a[A_\mu^U］e^{iS}<br>$$<br>规范变换$A_\mu\to A_\mu^U$后<br>$$<br>\begin{aligned}<br>Z&amp;=\int\mathcal{D}A_{\mu}\;\Delta[A_\mu]\int\mathcal{D}U\;\delta[F^a[A_\mu^U］e^{iS}\\<br>&amp;=\int\mathcal{D}U\int\mathcal{D}A_{\mu}\;\Delta[A_\mu]\delta[F^a[A_\mu］e^{iS}<br>\end{aligned}<br>$$<br>其中积分体积因子已经被拿掉了。</p>
 <p>在此基础我们可以对规范固定更进一步推广，譬如在Lorenz规范上添加如下的一个任意函数<br>$$<br>F^a=\partial^\mu A_\mu^a+C^a(x)<br>$$<br>生成泛函就变为<br>$$<br>Z=\int\mathcal{D}A_\mu\;\Delta[A_\mu]\delta[F^a[A_\mu]-C^a]e^{iS}<br>$$<br>$C_a(x)$是独立于生成泛函的，因此我们可以从归一化因子中提取构造出一项添加到泛函积分中<br>$$<br>\exp\Big[-\frac{i}{2\alpha}\int C_a^2(x)dx\Big]<br>$$<br>$\alpha$是一个独立参数。</p>
 <p>接着我们要积掉规范场$A_\mu(x)$，这下就要处理$\Delta$函数以使得操作合法。通过定义可知<br>$$<br>\Delta[A_\mu]=\det\Big|\frac{\delta F}{\delta\vartheta}\Big|_{F=0}=\det{M}<br>$$<br>这就是规范变换的Jacobi行列式。在借助Grassmann代数计算费米子场的时候，我们知道有这么个Gauss积分<br>$$<br>\det{iM}=\int\mathcal{D}\bar{\eta}\mathcal{D}\eta\exp\Big(-i\int dx\;\bar{\eta}^a M_{ab}\eta^b\Big)<br>$$<br>将这个Gauss积分插入泛函积分中，就可以顺利地实现我们想要的处理。这一来在物理图像上看，就相当于引入了一个新的场，不过由于它的场量是由Grassmann反对易代数来描述的。然而它和Dirac旋量场不同，它并没有带来任何自旋参与物理过程，这意味着它应该表现为一个0自旋的玻色场，然而却有着反对易的统计规则，这种场破坏了 自旋-统计定理。</p>
 <p>使用这种技术手段之后，泛函积分<br>$$<br>Z=\int\mathcal{D}A_\mu\;\Delta[A_\mu]\delta[F^a[A_\mu]-C^a]e^{iS}\exp\Big[-\frac{1}{2\alpha}\int C_a^2(x)dx\Big]<br>$$<br>就变成了</p>
 <p>\begin{align}<br>Z = N \int \mathcal{D} A_\mu \mathcal{D} \bar{\eta} \mathcal{D} \eta \exp \Bigg[ i \int d x \Big( \mathcal{L} - \frac{1}{2\alpha} F^2 - \bar {\eta}^a M_{ab}\eta^b \Big) \Bigg]<br>\end{align}</p>
 <p>$N$是无关的归一化因子，这样一来就可以以新的有效场来看待</p>
-<p>$$<br>Z=N\int\mathcal{D}A_\mu\mathcal{D}\bar{\eta}\mathcal{D}\eta\exp\Big(i\int dx\mathcal{L}_\text{eff}\Big)<br>$$</p>
-<p>$$<br>\mathcal{L}_\text{eff}=\mathcal{L}-\frac{1}{2\alpha}F^2-\bar{\eta}^a M_{ab}\eta^b<br>$$<br>有效拉格朗日量中第二项是规范固定项，第三项是额外引入的场项，称为“Faddeev-Popov鬼场”项。鬼场$\eta$是自旋-统计反常的0自旋Grassmann场，出现在Feynman图中时需要计算其对散射振幅的影响。不过这种诡异的场我们似乎从未在实验上发现过，实际上非物理真实的鬼场只会出现在Feynman图的内线（没有外线意味着实验上观察不到）中以保证量子场论的幺正性。</p>
+<p>$$<br>Z=N\int\mathcal{D}A_\mu\mathcal{D}\bar{\eta}\mathcal{D}\eta\exp\Big(i\int dx\mathcal{L}_\text{eff}\Big)<br>$$<br>$$<br>\mathcal{L}_\text{eff}=\mathcal{L}-\frac{1}{2\alpha}F^2-\bar{\eta}^a M_{ab}\eta^b<br>$$<br>有效拉格朗日量中第二项是规范固定项，第三项是额外引入的场项，称为“Faddeev-Popov鬼场”项。鬼场$\eta$是自旋-统计反常的0自旋Grassmann场，出现在Feynman图中时需要计算其对散射振幅的影响。不过这种诡异的场我们似乎从未在实验上发现过，实际上非物理真实的鬼场只会出现在Feynman图的内线（没有外线意味着实验上观察不到）中以保证量子场论的幺正性。</p>
 <p>现在我们可以来具体看一些例子。</p>
 <p>Lorenz规范下的$U(1)$规范场<br>$$<br>\delta A_\mu=\partial_\mu\vartheta<br>\;\;\;,\;\;\;<br>\delta F=\partial^2\vartheta<br>\;\;\;,\;\;\;<br>M=\frac{\delta F}{\delta\vartheta}=\partial_\mu\partial^\mu=\partial^2<br>$$<br>生成泛函</p>
-<p>$$<br>Z=N\int\mathcal{A}_\mu\exp\Bigg\lbrace i\int dx\Big[\mathcal{L}_0-\frac{1}{2\alpha}(\mathbf{\partial}\cdot\mathbf{A})^2\Big]\Bigg\rbrace\int\mathcal{D}\bar{\eta}\mathcal{D}\eta\exp\Big(i\int\bar{\eta}\partial^2\eta\;dx\Big)<br>$$</p>
-<p>最后鬼场项实际上没带来特别影响（可以看出它并没有和$U(1)$规范场耦合），被直接积掉。所以说正如人们所熟知的QED里面并没有鬼场。<br>这种情况规范场的传播子可以通过场强以及规范固定项<br>$<br>-\frac{1}{4}F_{\mu\nu}F_{\mu\nu}-\frac{1}{2\alpha}(\mathbf{\partial}\cdot\mathbf{A})^2<br>$<br>而计算出来,其逆为<br>$$<br>-\frac{1}{k^2}\Big[g_{\mu\nu}+(\alpha-1)\frac{k_\mu k_\nu}{k^2}\Big]<br>$$</p>
+<p>$$<br>Z=N\int\mathcal{A}_\mu\exp\Bigg\lbrace i\int dx\Big[\mathcal{L}_0-\frac{1}{2\alpha}(\mathbf{\partial}\cdot\mathbf{A})^2\Big]\Bigg\rbrace\int\mathcal{D}\bar{\eta}\mathcal{D}\eta\exp\Big(i\int\bar{\eta}\partial^2\eta\;dx\Big)<br>$$<br>最后鬼场项实际上没带来特别影响（可以看出它并没有和$U(1)$规范场耦合），被直接积掉。所以说正如人们所熟知的QED里面并没有鬼场。<br>这种情况规范场的传播子可以通过场强以及规范固定项<br>$<br>-\frac{1}{4}F_{\mu\nu}F_{\mu\nu}-\frac{1}{2\alpha}(\mathbf{\partial}\cdot\mathbf{A})^2<br>$<br>而计算出来,其逆为<br>$$<br>-\frac{1}{k^2}\Big[g_{\mu\nu}+(\alpha-1)\frac{k_\mu k_\nu}{k^2}\Big]<br>$$</p>
 <p>其中有两种协变规范：$\alpha=1$是Feynman规范，$\alpha=0$则是Landau规范。Feynman规范一般较多用于计算散射振幅。Landau规范的优势则在于计算传播子时能计入相互作用的贡献，如<br>$$<br>\frac{1}{p^2-m^2+i0^+}\to\frac{1}{A(p^2)p^2-B(p^2)+i0^+}<br>$$<br>其中$A$,$B$是由单圈积分给出修正系数（给出有效质量之类），在选择了Landau规范时候就有$A(p^2)=1$ 使得计算简化。</p>
 <p>$U(1)$是Abel统计的，接下来看非Abel的$SU(n)$规范理论，还是在Lorenz规范下，有<br>$$<br>\delta A_\mu^a=f^{abc}A_\mu^b\vartheta^c+\partial_\mu\vartheta^a<br>$$<br>$$<br>\delta F^a=f^{abc}\partial^\mu(A_\mu^b\vartheta^c)+\partial^2\vartheta^a<br>$$<br>$$<br>M_{ab}=\frac{\delta F^a}{\delta\vartheta^b}=-f^{abc}\partial^\mu A_\mu^c- f^{abc}A_\mu^c\partial^\mu+\delta^{ab}\partial^2<br>$$<br>因此鬼场项就写为<br>\begin{align}<br>\int\mathcal{D}\bar{\eta}\mathcal{D}\eta &amp;\exp\Big(-i\int dx\;\bar{\eta}^a\frac{\delta F^a}{\delta\vartheta^b}\eta^b\Big)\\<br>&amp;=\int\int\mathcal{D}\bar{\eta}\mathcal{D}\eta\exp\Big(-i\int dx\;\bar{\eta}^a\partial^2{\eta}^a+igf^{abc}\int dx[(\bar{\eta}^a\partial^\mu{\eta}^b)A_\mu^c+\partial^\mu A_\mu^c(\bar{\eta}^a{\eta}^b)]\Big)<br>\end{align}<br>这里面给出了鬼场的传播子以及鬼场自耦顶角<br>$$<br>(\partial^2)^{-1}=\frac{1}{k^2}\delta^{ab}<br>$$</p>
 <p>$$<br>-gf^{abc}p_\mu<br>$$</p>
@@ -403,21 +399,6 @@
 <p>$$<br>-g^2[f^{abc}f^{cde}(g_{\mu\rho}g_{\nu\sigma}-g_{\mu\sigma}g_{\nu\rho})+f^{ace}f^{bed}(g_{\mu\sigma}g_{\rho\nu}-g_{\mu\nu}g_{\rho\sigma})+f^{ade}f^{bce}(g_{\mu\nu}g_{\sigma\rho}-g_{\mu\rho}g_{\sigma\nu})]<br>$$</p>
 <p>还有一种特殊的规范称为轴向规范(axial gauge)，它是非协变的，定义为：<br>$$<br>t^\mu A_\mu^a=0\;\;\;,\;\;\;t^\mu t_\mu=-1<br>$$<br>规范约束项即为<br>$$<br>F^a=t^\mu A_\mu^a<br>$$<br>通常Minkovski时空中，类空矢量选为z分量的单位向量$(0,0,0,1)$，因此规范条件为$A^z=0$。从非Abel规范变换得到<br>$$<br>\delta F^a=f^{abc}A_\mu^b t^\mu\vartheta^c+t^\mu\partial_\mu\vartheta^a=t^\mu\partial_\mu\vartheta^a<br>\;\;\;,\;\;\;<br>\frac{\delta F^a}{\delta\vartheta^b}=\delta^{ab}t^\mu\partial_\mu<br>$$<br>我们发现这里鬼场并不与规范场耦合（退耦了），所以在这种规范约束下我们可以去掉鬼场，不过付出的代价是失去了协变性。</p>
 <p>这时的有效拉格朗日量表达为<br>\begin{align}<br>\mathcal{L}+\mathcal{L}_{GF}&amp;=-\frac{1}{4}G_{\mu\nu}^a G^{a\mu\nu}-\frac{1}{2\alpha}(t^\mu A_\mu^a)^2\\<br>&amp;\Rightarrow\frac{1}{2}\int dx\;A^{\mu a}\Big(\partial^2 g_{\mu\nu}-\partial_\mu\partial_\nu-\frac{1}{\alpha}t_\mu t_\nu\Big)A^{\nu a}<br>\end{align}<br>求逆给出传播子<br>$$<br>-\frac{1}{k^2}<br>\Big[g^{\mu\nu}+\frac{(t^2+\alpha k^2)k^\mu k^\nu}{(k\cdot t)^2}-\frac{k^\mu t^\nu +t^\mu k^\nu}{k\cdot t}\Big]<br>$$</p>
-<h3 id="BV-formalism"><a href="#BV-formalism" class="headerlink" title="BV formalism"></a>BV formalism</h3><p>首先BV formalism是Lagrangian方法，要区别于基于Hamiltonian的BFV(F是E. S. Fradkin).数学上来看基本就是homological微扰论。 从操作上来看大概分为两步，我先用物理语言简单说一下，再说数学idea.物理上来看，对于某个场论，首先记模空间为$\mathcal{M}$，包含场和场的导数的所有可能构型。<br>第一步：通过运动方程欧拉-拉格朗日定义出$\mathcal{M}$的子空间$\mathcal{\Sigma}$，也叫stationary space;<br>第二步：关于场论的动力学，我们关心在壳物理量，所以在$\mathcal{\Sigma}$上定义在壳函数，它们构成$\mathbb{C}^{\infty}(\Sigma)=\mathbb{C}^{\infty}(\mathcal{M})/\mathcal{N}$，其中$\mathcal{N}$是理想，由在$\mathcal{\Sigma}$上值为零的函数组成。这一步quotient相当于模掉了gauge redundancy, 因为运动方程满足一些诺特关系。</p>
-<p>数学上，即BV formalism里，这两步分别由Koszul-Tate differential $\delta$ 的同调以及longitudinal operator $\gamma$ 的上同调来描述。<br>$\delta$ 在同调中中给出了运动方程的resolution. 具体一些：在拉氏量中，我们对每个场 $\phi^i$ 都引入反场 $\phi_i^* $，它保证运动方程在 $\delta$ 同调中trivial;<br>$\gamma$ 上同调在熟悉的Yang-Mills中等价于李代数上同调。</p>
-<p>有了 $\delta$ 和 $\gamma$ ，我们就能借助homological微扰论来定义BV算子 $s=\delta+\gamma+\cdots$ ，因为是微扰论， $\delta$ 和 $\gamma$ 满足一些迭代关系，其中 $\cdots$ 是为了让 $s^2=0$ 而必须加的项（比如当规范代数open时；而对于Yang-Mills, 因为规范代数不借助运动方程就close, 所以我们不用加$\cdots$）。具体地，我们需要定义著名的反括号（antibracket），大概是把泊松括号里的加号变成减号。在反括号 $(\cdot,\cdot)$ 下，每个场和其反场互为对偶。对于给定的源 $S$ 以及任意泛函 $F(\phi^i,\phi_i^*)$，BV算子即定义为$sF=(S,F)$ . 而经典主方程为 $(S,S)=0$ ，等价于 $s^2=0$ .</p>
-<p>在量子层面上，作用量要得到修正 $W=S+\sum_{i}\hbar^iM_i$ ，然后算子VEV的规范不变性等价于量子主方程 $\frac{1}{2}(W,W)=i\hbar\Delta W$ ，其中 $\Delta$ 是定义在场和反场空间上类似拉普拉斯的算子。当 $\Delta S=0$ 时，可以取 $W=S$ .</p>
-<p>现在总结一下BV中数学和物理的关系：</p>
-<ul>
-<li>规范不变的可测量通过ghost数为零的上同调群 $H^*(s)$ 来描述；</li>
-<li>守恒流等价于反场数为零时的特征上同调 $H^{0,n-1}_0(\delta|d)$ ，即 $\delta$ 的上同调对 $(n-1)$ -形式模掉全微分，其中 $n$ 是时空维数；</li>
-<li>全局对称的等价类就是 $H^{0,n}_1(\delta|d)$ ;</li>
-<li>规范反常受控于$H^{1,n}(s|d)$，即反场数为1的 $H^*(s)$ 对所有 $n$ -形式模掉全微分。物理上， $H^{1,n}(s|d)$ 的定义受限于推广后的Wess-Zumino自洽条件；</li>
-<li>$H^{0,n}(s|d)$ 包含了该场论的重整化以及所有counter-term的信息；$H^{0,n}(\gamma,d)$ 和 $H^{1,n}(\gamma,d)$ 描述该理论所有可能的deformation.</li>
-</ul>
-<p>应用方面，BV因为不需要做gauge-fixing所以很受欢迎，主要用途基本就是上述bullet points里的那些：用于找出量子反常与守恒流，以及用于BRST失效的情形，比如当规范代数open时（即只有模掉运动方程后才close）的量子化，例如超引力。数学上可以用来得到topological CFT的Gromov-Witten potential, 比如Costello这篇<a href="https://arxiv.org/abs/math/0509264" target="_blank" rel="noopener">The Gromov-Witten potential associated to a TCFT</a>。其它和镜对称的关系我就不太清楚了。</p>
-<p>PS: 这个话题太大了，细节也海量，之后有空来补。除了两篇原文之外，推荐几个不错的references: <a href="https://arxiv.org/abs/hep-th/0506098" target="_blank" rel="noopener">A. Fustera, M. Henneaux and A. Maas,BRST-antifield Quantization: a Short Review</a><br><a href="https://www.worldscientific.com/doi/abs/10.1142/S0217732390000561" target="_blank" rel="noopener">E. Witten, A Note on the Antibracket Formalism</a>，首次给出了反场，反括号和 $\Delta$ 的几何解释，文章主体只有5页，非常推荐！<a href="https://arxiv.org/abs/hep-th/9205088" target="_blank" rel="noopener">A. Schwarz, Geometry of Batalin-Vilkovisky quantization</a><br>楼上说的Weinberg第二卷的15.9章也不错，比较物理；另外17.1-17.3章是BV在Zinn-Justin方程以及重整化中的应用；<br>几乎整本经典教材：Henneaux和Teitelboim的<a href="https://press.princeton.edu/titles/5156.html" target="_blank" rel="noopener">Quantization of Gauge Systems</a>，之前提到的 $d,\delta,s$ 都有详细介绍。</p>
-<p>PPS: 题主如果对quantization非常感兴趣的话，推荐入坑一种升级版的几何量子化–膜量子化:)  见Gukov-Witten的<a href="https://arxiv.org/abs/0809.0305" target="_blank" rel="noopener">Branes and Quantization</a>和Gukov的<a href="https://arxiv.org/abs/1011.2218" target="_blank" rel="noopener">Quantization via Mirror Symmetry</a><br>BV代数与Gerstenhaber代数一起还跟1999年Chas和Sullivan定义的<a href="https://arxiv.org/abs/math/9911159" target="_blank" rel="noopener">string topology</a>有密切关系，我一点也不懂。</p>
 <h3 id="分数量子Hall效应"><a href="#分数量子Hall效应" class="headerlink" title="分数量子Hall效应"></a>分数量子Hall效应</h3><p><a href="https://www.guokr.com/blog/773996/" target="_blank" rel="noopener">这里</a></p>
 
       
@@ -436,8 +417,6 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Solid-State-Physics/" rel="tag"># Solid State Physics</a>
-          
             <a href="/tags/Quantum-Theory-of-Fields/" rel="tag"># Quantum Theory of Fields</a>
           
         </div>
@@ -451,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/22/BCS theory/" rel="next" title="BCS theory">
-                <i class="fa fa-chevron-left"></i> BCS theory
+              <a href="/2018/05/28/Skyrmions/" rel="next" title="转载的学习笔记（五）">
+                <i class="fa fa-chevron-left"></i> 转载的学习笔记（五）
               </a>
             
           </div>
@@ -460,10 +439,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/28/量子多体理论：非对角长程序/" rel="prev" title="转载的学习笔记（二）">
-                转载的学习笔记（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -544,7 +519,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -615,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Faddeev-Popov-ghost-field"><span class="nav-number">1.</span> <span class="nav-text">Faddeev-Popov ghost field</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BV-formalism"><span class="nav-number">2.</span> <span class="nav-text">BV formalism</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分数量子Hall效应"><span class="nav-number">3.</span> <span class="nav-text">分数量子Hall效应</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Faddeev-Popov-ghost-field"><span class="nav-number">1.</span> <span class="nav-text">Faddeev-Popov ghost field</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分数量子Hall效应"><span class="nav-number">2.</span> <span class="nav-text">分数量子Hall效应</span></a></li></ol></div>
             
 
           </div>

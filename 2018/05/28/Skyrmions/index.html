@@ -10,8 +10,8 @@
   <meta charset="UTF-8"/>
 <script>
     (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
+        if('note'){
+            if (prompt('请输入文章密码') !== 'note'){
                 alert('密码错误');
                 history.back();
             }
@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Quantum Theory," />
+  <meta name="keywords" content="Solid State Physics,Quantum Theory of Fields," />
 
 
 
@@ -93,18 +93,20 @@
 
 
 
-<meta name="description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
-<meta name="keywords" content="Quantum Theory">
+<meta name="description" content="Skyrmions">
+<meta name="keywords" content="Solid State Physics,Quantum Theory of Fields">
 <meta property="og:type" content="article">
-<meta property="og:title" content="路径积分专题">
-<meta property="og:url" content="http://lonelybsh.github.io/2018/01/22/Path Integral/index.html">
+<meta property="og:title" content="转载的学习笔记（五）">
+<meta property="og:url" content="http://lonelybsh.github.io/2018/05/28/Skyrmions/index.html">
 <meta property="og:site_name" content="呆头鹅の学习日常">
-<meta property="og:description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
+<meta property="og:description" content="Skyrmions">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-10T08:52:36.497Z">
+<meta property="og:image" content="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/newxraylaser.png">
+<meta property="og:updated_time" content="2018-06-20T15:20:26.897Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="路径积分专题">
-<meta name="twitter:description" content="$\textbf{1.平方型拉氏量}$  $$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$  体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{">
+<meta name="twitter:title" content="转载的学习笔记（五）">
+<meta name="twitter:description" content="Skyrmions">
+<meta name="twitter:image" content="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/newxraylaser.png">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://lonelybsh.github.io/2018/01/22/Path Integral/"/>
+  <link rel="canonical" href="http://lonelybsh.github.io/2018/05/28/Skyrmions/"/>
 
 
 
 
 
-  <title>路径积分专题 | 呆头鹅の学习日常</title>
+  <title>转载的学习笔记（五） | 呆头鹅の学习日常</title>
   
 
 
@@ -285,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/01/22/Path Integral/">
+    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/05/28/Skyrmions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="呆头鹅">
@@ -302,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">路径积分专题</h1>
+          <h1 class="post-title" itemprop="name headline">转载的学习笔记（五）</h1>
         
 
         <div class="post-meta">
@@ -314,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T00:00:00+08:00">
-                2018-01-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T00:00:00+08:00">
+                2018-05-28
               </time>
             
 
@@ -374,13 +376,18 @@
       
 
       
-        <p>$\textbf{1.平方型拉氏量}$</p>
-<blockquote>
-<p>$$L=a(t){\dot q}^2+b(t)q\dot q+c(t)q^2+d(t)\dot q+e(t)q+f(t)$$</p>
-</blockquote>
-<p>体系的积分路径$q(t)$可视为是经典路径$q_{cl}(t)$扰动而变形后的路径。<br>经典路径满足欧拉－拉格朗日方程$\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot q}-\dfrac{\partial L}{\partial q} = 0$。</p>
-<p>用$x(t)$表示相对 $q_{cl}(t)$的扰动，则体系的路径可表示为：</p>
-<p>\begin{align}<br>q(t)&amp;=q_{cl}(t)+x(t)&amp;\<br>\dot q(t)&amp;=\dot q_{cl}(t)+\dot x(t)&amp;<br>\end{align}</p>
+        <h3 id="Skyrmions"><a href="#Skyrmions" class="headerlink" title="Skyrmions"></a>Skyrmions</h3><a id="more"></a>
+<p>Author：$\textbf{Tom Gao}$</p>
+<p>skyrmions和Majorana束缚态类似，是最近几年挺热门的研究课题，而奇妙的是这两个看起来都是不同系统的产物却有深刻联系。</p>
+<p>关于skyrmion我们知道它是一种新奇的拓扑激发，而我们以前也见过一种二维的拓扑激发，那就是KT相变中的涡旋。这个东西其实很多地方都可形成，包括超导里面的涡旋也是结构类似的拓扑缺陷。我们来看看skyrmion又是怎么和它们有不同的特点。</p>
+<p>2D XY模型 （二维平面相干态矢 $z=e^{i\theta}$ ）<br>$$<br>S_\text{eff}=\int  dt\;d^2x\;\frac{1}{2g}\left[(\partial_t\theta)^2- v^2(\partial_\mu\theta)^2\right]<br>$$<br>能产生$U(1)$涡旋的拓扑孤子激发，位形的同伦群映射是 $\pi_1(S^1):\text{circle}\to\text{circle}$</p>
+<p>2D Heisenberg模型（$\mathbf S_i=\frac{1}{2}c_i^\dagger\mathbf\sigma c_i$）<br>$$<br>H=J\sum_{\langle ij\rangle}\mathbf S_i \cdot\mathbf S_j<br>$$<br>我们可以研究一下$SU(2)$对称破缺序AFM态（或SDW态）系统的低能有效作用量（用相干态基矢来表达 $z=(z_1,z_2)^{\tiny T}$，$\mathbf n=z^\dagger\mathbf\sigma z$ ，AFM基态为$\mathbf n_i=(-1)^i\hat{z}$ ）<br>$$<br>S_\text{eff}=\int dt\;\left(i\sum_{i}z_i^\dagger \dot z_i-\frac{J}{4}\sum_{\langle ij\rangle}\mathbf n_i \cdot\mathbf n_j\right)<br>$$<br>此有效理论即为$O(3)\;\text{NL}\sigma$模型。接着考察无能隙自旋波涨落，那么就在基态附近计入涨落场:$\mathbf n_i(t)= (-1)^i\mathbf n(x_i,t)\to (-1)^i\mathbf n(x_i,t)+\delta\mathbf n(x_i,t)$，$(-1)^i\mathbf n(x_i,t)$描述AF无能隙自旋波涨落，而$\delta\mathbf n(x_i,t)$描述高能铁磁涨落：$\delta\mathbf n\ll 1\;,\mathbf n\cdot\delta\mathbf n=0$<br>那么就得到<br>\begin{align}<br>&amp;\int dt\;2iz_i^\dagger \dot{z}=\int dt\;2i(-1)^iz(x_i,t)^\dagger\dot{z}(x_i,t)+\int dt\;\mathbf n\cdot(\dot{\mathbf n}\times\delta\mathbf n)\\<br>&amp;\Rightarrow\;i\sum_i z_i^\dagger\dot z_i=\frac{1}{8}\int d^2x\;\mathbf n\cdot(\partial_x\mathbf n\times\partial_y\mathbf n)+\frac{1}{2}\int d^2x\;\mathbf n\cdot(\dot{\mathbf n}\times\delta\mathbf n)\<br>\end{align}<br>而$\frac{J}{4}\sum_{\langle ij\rangle}\mathbf n_i\cdot\mathbf n_j$中会产生$\delta\mathbf n^2$，于是可以在路径积分中积掉涨落场得到有效作用量<br>$$<br>S=\frac{1}{2g}\int dt\;d^2x\;[(\partial_t\mathbf n)^2-v^2(\partial_\mu\mathbf n)^2]+\frac{1}{8}\int dt\;d^2x\;\mathbf n\cdot(\partial_x\mathbf n\times\partial_y\mathbf n)<br>$$<br>可以发现最后这个就是WZW拓扑项$S_{\text{WZW}}=\frac{\theta}{8\pi}\int d^2x\;\mathbf n\cdot(\partial_x\mathbf n\times\partial_y\mathbf n)$，这个$\theta$参数的意义后面再解释，首先我们知道对于$s$自旋系统其值为$2\pi s$，并且是拓扑保护的$\delta S_{\text{WZW}}=0$。那这个项有什么意义呢？从动力学角度看，作用量在虚时形式中有$\frac{1}{2g}(|\partial_\tau\mathbf n|^2+v^2|\partial_x\mathbf n|^2)$，此非线性作用量除了平凡的稳定路径的构型（自旋单态基态）外还有个非平凡稳定路径解$(n^1,n^2,n^3)=\left(\frac{2\frac{\lambda}{r}}{1+\frac{\lambda^2}{r^2}}\frac{x_1}{r},\frac{2\frac{\lambda}{r}}{1+\frac{\lambda^2}{r^2}}\frac{x_2}{r},\frac{1-\frac{\lambda^2}{r^2}}{1+\frac{\lambda^2}{r^2}}\right)$，是个标度$\lambda$不变的孤子（soliton），作用量为$S_0\sim 4\pi/g$。其密度有限正比于$e^{-S_0}$，因此是个有限能量的拓扑激发。</p>
+<p><img src="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/newxraylaser.png" alt="Skyrmion"></p>
+<p>这就产生的是$O(3)$ skyrmions激发，而拓扑项实际上就是衡量这个非平凡场的环绕数的拓扑不变量，因此称为skyrmion的拓扑荷。相应位形同伦群是$\pi_2(S^2):\text{sphere}\to\text{sphere}$<br>这样对比就发现这两种不同态系统的不同拓扑激发之间的拓扑性质存在有一个非平凡同伦映射 $\pi_1(S^1)=\mathbb{Z}\to\pi_2(S^2)=\mathbb{Z}$<br>$$<br>Q_\text{vortex}=\frac{1}{2\pi}\int dx_\mu\;(\mathbf{n}\times\partial_\mu\mathbf{n})\Rightarrow<br>Q_\text{skyrmion}=\frac{1}{4\pi}\int dx dy\;\mathbf{n}\cdot(\partial_x\mathbf{n}\times\partial_y\mathbf{n})<br>$$<br>此外和2D XY模型里的成对的（正反）涡旋拓扑激发不同，skyrmions是非关联的独立激发。涡旋破坏自旋系统的长程序只保留短程序，关联函数为$\langle\mathbf{S}_i,\mathbf{S}_j\rangle\sim\exp\left(-\frac{|R_i-R_j|}{\xi}\right)$（所以2D系统并没有ODLRO，像XY模型就存在KT拓扑相变）,而skyrmion激发是保留着代数长程序的 $\langle\mathbf{S}_i,\mathbf{S}_j\rangle\sim\frac{1}{|R_i-R_j|}$</p>
+<p>不过拿AFM这种铁磁涨落产生的拓扑孤子结构来实现skyrmion晶格比较不好调控也处于亚稳态，很可能就形成了自旋螺旋(spin spiral)晶格甚至弛豫回AF基态。</p>
+<p>这样我们需要通过别的办法更稳妥的方法来产生更稳定独立的拓扑激发skyrmions。于是人们想着能在FM态中直接能有一个作用项保证动力学上拓扑荷稳定地演化，这就引入了Dzyaloshinsky-Moriya作用<br>$$<br>H=\int d^2x\;\left[\frac{J}{2}(\nabla\mathbf{n})^2+D\;\mathbf{n}\cdot\nabla\times\mathbf{n}-\mathbf{B}\cdot\mathbf{n}\right]<br>$$<br>从连续模型退回去自旋格点模型就得到<br>$$<br>H=J\sum_{\langle ij\rangle}\mathbf S_i \cdot\mathbf S_j+\sum_{ij}\mathbf{D}_{ij}\cdot(\mathbf S_i \times\mathbf S_j)-\sum_i\mathbf{B}\cdot\mathbf{S}_i<br>$$<br>另外还我们重新写一下WZW项可发现<br>\begin{align}<br>&amp;\int \;d^2x\;[\partial_\mu\mathbf{n}\cdot\partial_\mu\mathbf{n}+\epsilon^{\mu\nu}\mathbf{n}\cdot(\partial_\mu\mathbf{n}\times\partial_\nu\mathbf{n})]\\<br>&amp;=\frac{1}{2}\int \;d^2x\;(\partial_\mu\mathbf{n}+\epsilon^{\mu\nu}\mathbf{n}\times\partial_\nu \mathbf{n})\cdot(\partial_\mu\mathbf{n}+\epsilon^{\mu\lambda}\mathbf{n}\times\partial_\lambda\mathbf{n})<br>\end{align}<br>类比一下电磁场最小耦合的拉格朗日量，相当于这种拓扑项的产生相当于演生了一种规范场（Chern-Simons规范场）。规范场联络是$a_\mu=-i\langle\mathbf{n}|\partial_\mu|\mathbf{n}\rangle=iz^\dagger\overleftrightarrow{\partial}_\mu z$，曲率即为<br>$$b_{12}=\partial_1 a_2-\partial_2 a_1=(\nabla\times a)_{12}=\epsilon^{\mu\nu\lambda}n_\mu\partial_1n_\nu\partial_2n_\lambda=\frac{1}{2}\mathbf{n}\cdot(\partial_1\mathbf{n}\times\partial_2\mathbf{n})$$<br>因此DW作用Heisenberg模型的拉格朗日量还可映射成一种$\mathbf{CP}^1$规范场下相干态系统的形式<br>\begin{align}<br>L&amp;=-\frac{J}{2}\partial_\mu \mathbf{n}\partial^\mu \mathbf{n}-D\;\mathbf{n}\cdot\nabla\times\mathbf{n}+\mathbf{B}\cdot\mathbf{n}+\frac{\theta}{8\pi}\mathbf{n}\cdot(\partial_x\mathbf{n}\times\partial_y\mathbf{n})\\<br>&amp;=-2J(D_\mu z)^\dagger(D^\mu z)+\mathbf{B}\cdot z^\dagger\mathbf\sigma z+\frac{\theta}{8\pi}a\cdot\nabla\times a\\<br>D_\mu&amp;=\partial_\mu+ia_\mu+i\frac{D}{2J}\sigma_\mu<br>\end{align}<br>则规范流为$j^\mu=\frac{1}{8\pi}\epsilon^{\mu\nu\lambda}\epsilon_{abc}n^a\partial_\nu n^b\partial_\lambda n^c$。</p>
+<p>可以说这环绕数拓扑项实际上可以说是标志着一大类拓扑相态，譬如除了自旋系统外还有拓扑绝缘体、FQH系统以及拓扑超导系统、石墨烯以及Weyl半金属，它们都能产生这样的拓扑项演生出统计规范势。它们也都有各自的拓扑激发，e.g.拓扑超导的涡旋缺陷或者局域表面态中里面就有形成一种赝激发：Majorana零模。而实际上Kitaev的Majorana链模型可以通过Jordan-Wigner算符投影映射成非平庸量子相的1D横场Ising模型，产生的就是一维的skyrmion畴壁结构，Majorana数（计算Majorana表象下反对称矩阵的Pffafian）等价于skyrmion拓扑荷（Pontryagin class$\Leftrightarrow$1st Chern class）。而由铁磁体组合成的拓扑超导系统也可以通过DM交换作用形成Majorana束缚态。而像超导体、石墨烯这些可以具有一种赝自旋结构的系统可以说它们的``skyrmions”实际上是隐藏在了参数赝自旋空间里面（Bloch sphere $\mathbb{S}^2$）。</p>
+<p>我们说skyrmion能通过形成局部微型磁场来明显物理上表现出其拓扑荷，能够很直接地操控来存储数据。不像拓扑超导那样表现得很隐蔽，还得用STM或ARPES等来测出表面态密度来反映。不过石墨烯里面的赝自旋演生的赝磁场目前也在实验上能操控了，实现谷极化流分离，看来也提供了一种办法来作为广泛意义上的自旋电子器件。</p>
 
       
     </div>
@@ -398,7 +405,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Quantum-Theory/" rel="tag"># Quantum Theory</a>
+            <a href="/tags/Solid-State-Physics/" rel="tag"># Solid State Physics</a>
+          
+            <a href="/tags/Quantum-Theory-of-Fields/" rel="tag"># Quantum Theory of Fields</a>
           
         </div>
       
@@ -411,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/21/Website/" rel="next" title="公开课">
-                <i class="fa fa-chevron-left"></i> 公开课
+              <a href="/2018/05/28/量子多体理论：超导理论/" rel="next" title="转载的学习笔记（一）">
+                <i class="fa fa-chevron-left"></i> 转载的学习笔记（一）
               </a>
             
           </div>
@@ -421,8 +430,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/22/BCS theory/" rel="prev" title="BCS theory">
-                BCS theory <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/28/Faddeev-Popov ghost field/" rel="prev" title="转载的学习笔记（三）">
+                转载的学习笔记（三） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -475,8 +484,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -556,6 +574,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Skyrmions"><span class="nav-number">1.</span> <span class="nav-text">Skyrmions</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
