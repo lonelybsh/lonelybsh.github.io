@@ -10,8 +10,8 @@
   <meta charset="UTF-8"/>
 <script>
     (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
+        if('note'){
+            if (prompt('请输入文章密码') !== 'note'){
                 alert('密码错误');
                 history.back();
             }
@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Quantum Theory,Solid State Physics," />
+  <meta name="keywords" content="Solid State Physics,Quantum Theory of Fields,Superconductivity," />
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="中岛变换的技巧有相互作用的电子-声子系统的哈密顿量如下：\begin{align}H_0=&amp;amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;amp;\\+&amp;amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma}">
-<meta name="keywords" content="Quantum Theory,Solid State Physics">
+<meta name="description" content="量子多体理论：非对角长程序">
+<meta name="keywords" content="Solid State Physics,Quantum Theory of Fields,Superconductivity">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BCS theory">
-<meta property="og:url" content="http://lonelybsh.github.io/2018/04/22/BCS theory/index.html">
+<meta property="og:title" content="转载的学习笔记（二）">
+<meta property="og:url" content="http://lonelybsh.github.io/2018/05/28/量子多体理论：非对角长程序/index.html">
 <meta property="og:site_name" content="呆头鹅の学习日常">
-<meta property="og:description" content="中岛变换的技巧有相互作用的电子-声子系统的哈密顿量如下：\begin{align}H_0=&amp;amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;amp;\\+&amp;amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma}">
+<meta property="og:description" content="量子多体理论：非对角长程序">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-06T09:36:30.362Z">
+<meta property="og:updated_time" content="2018-06-20T14:55:24.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BCS theory">
-<meta name="twitter:description" content="中岛变换的技巧有相互作用的电子-声子系统的哈密顿量如下：\begin{align}H_0=&amp;amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;amp;\\+&amp;amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma}">
+<meta name="twitter:title" content="转载的学习笔记（二）">
+<meta name="twitter:description" content="量子多体理论：非对角长程序">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://lonelybsh.github.io/2018/04/22/BCS theory/"/>
+  <link rel="canonical" href="http://lonelybsh.github.io/2018/05/28/量子多体理论：非对角长程序/"/>
 
 
 
 
 
-  <title>BCS theory | 呆头鹅の学习日常</title>
+  <title>转载的学习笔记（二） | 呆头鹅の学习日常</title>
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/04/22/BCS theory/">
+    <link itemprop="mainEntityOfPage" href="http://lonelybsh.github.io/2018/05/28/量子多体理论：非对角长程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="呆头鹅">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">BCS theory</h1>
+          <h1 class="post-title" itemprop="name headline">转载的学习笔记（二）</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T00:00:00+08:00">
-                2018-04-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T00:00:00+08:00">
+                2018-05-28
               </time>
             
 
@@ -374,14 +374,22 @@
       
 
       
-        <h3 id="中岛变换的技巧"><a href="#中岛变换的技巧" class="headerlink" title="中岛变换的技巧"></a>中岛变换的技巧</h3><p>有相互作用的电子-声子系统的哈密顿量如下：<br>\begin{align}<br>H_0=&amp;\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k&amp;\\<br>+&amp;\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q+h.c.&amp;<br>\end{align}<br>选择合适的母函数$S$，做变换$H_S=e^{-S}He^{S}$，然后利用<a href="https://en.wikipedia.org/wiki/Baker_Campbell_Hausdorff_formula" target="_blank" rel="noopener">Baker–Campbell–Hausdorff</a>公式：<br><a id="more"></a><br>\begin{align}<br>H_S&amp;=H+[H,S]+\frac{1}{2}[[H,S],S]+\cdots&amp;\\<br>&amp;=H_0+(H_1+[H_0,S])+\frac{1}{2}[(H_1+[H_0,S]),S]+\frac{1}{2}[H_1,S]+\cdots&amp;<br>\end{align}<br>令$H_1+[H_0,S]=0$，消去电子-声子的一阶相互作用，然后准确讨论至$H_1$的二阶哈密顿量$H_S=H_0+\frac{1}{2}[H_1,S]$</p>
-<p>设$S=\sum_{q,k,\sigma} \Phi (k,q) c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q + h.c$</p>
-<p>\begin{align}<br>\small H_1+i[H_0,S]=&amp;\small\sum_{q,k,\sigma}D_q c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q+h.c. + i [\sum_q \hbar\omega_q a^{\dagger}_q a_q + \sum_k \varepsilon_k c^{\dagger}_k c_k , \sum_{q,k,\sigma} {\Phi (k,q)} c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q + h.c]&amp;\\<br>=&amp;\sum_q \sum_{k\sigma} [i\Phi(k,q)(\varepsilon_{k+q}-\varepsilon_k-\hbar\omega_q)+D_q] c^{\dagger}_{k+q,\sigma} c_{k,\sigma} a_q + h.c&amp;\\<br>=&amp;0&amp;<br>\end{align}<br>故只需令$\Phi(k,q)=\frac{iD_q}{\varepsilon_{k+q}-\varepsilon_k-\hbar\omega_q}$。<br>若直接计算对易子，得到的结果包含了$a^{\dagger}_q a_q,a^{\dagger}_q a^{\dagger}_q,a_q a_q$(声子自能修正，双声子过程项)和$c^{\dagger}_{k,\sigma} c_{k,\sigma}$的电子自能修正项以及$c^{\dagger}_{k+q,\sigma} c^{\dagger}_{k^\prime-q,\sigma^\prime} c_{k^\prime\sigma^\prime} c_{k\sigma}$型的电子间有效相互作用项。为选出$H_{\rm eff}$，可在声子真空态求平均，然后去掉电子自能修正。<br>\begin{align}<br>H_{\rm eff}=&amp;\left\langle 0 \right|\frac{1}{2}i[{H_1},S]\left| 0 \right\rangle&amp;\\<br>=&amp;\frac{1}{2}i\sum_q {\left\langle 0 \right|H_1\left| 1_q \right\rangle \left\langle 1_q \right|S\left| 0 \right\rangle} - {\left\langle 0 \right|S\left| 1_q \right\rangle \left\langle 1_q \right|H_1\left| 0 \right\rangle}&amp;\\<br>=&amp;\sum_{k\sigma,k^\prime\sigma^\prime,q} \frac{ \left| D_q \right| ^2 \hbar\omega}{(\varepsilon_{k+q}-\varepsilon _k)^2-(\hbar\omega_q)^2} c^{\dagger}_{k+q,\sigma} c^{\dagger}_{k^\prime-q,\sigma^\prime} c_{k^\prime\sigma^\prime} c_{k\sigma}&amp;<br>\end{align}</p>
-<h3 id="BCS哈密顿量的对角化"><a href="#BCS哈密顿量的对角化" class="headerlink" title="BCS哈密顿量的对角化"></a>BCS哈密顿量的对角化</h3><p>在费米面附近$|\varepsilon_{k+q}-\varepsilon_k|&lt;\hbar\omega_q\approx\hbar\omega_D$的能壳内有吸引作用，这里$\omega_D$为德拜频率。吸引区可以近似用一个厚度为$2\hbar\omega_D$的固定能壳代替。Bardeen等认为该能壳外排斥作用可以忽略，而能壳内净吸引可近似为常数，相当于取各项同性的s波散射。<br>在散射的电子对中，一对自旋和动量都相反的电子对吸引作用贡献最大。BCS约化哈密顿量可表示为：<br>\begin{align}<br>H=\sum_k \eta_k (c^{\dagger}_k c_k+c^{\dagger}_{-k} c_{-k}) + \frac{g}{V}\sum_k c^{\dagger}_k c^{\dagger}_{-k} c_{-k} c_k \quad \eta_k=\varepsilon_k-\mu<br>\end{align}<br>作平均场近似$\frac{g}{V}\sum_k \left\langle c_{-k} c_k \right\rangle =\Delta,\frac{g}{V}\sum_k \left\langle c^{\dagger}_k c^{\dagger}_{-k} \right\rangle =\Delta^*$</p>
-<p>\begin{align}<br>H=\sum_k \eta_k (c^{\dagger}_k c_k+c^{\dagger}_{-k} c_{-k}) - \sum_k \Delta c^{\dagger}_k c^{\dagger}_{-k} + \Delta^* c_{-k} c_k + \frac{V}{g}|\Delta|^2<br>\end{align}</p>
-<p>引入Nambu旋量$\phi=\left( \begin{array}{c} c_k \\c^{\dagger}_{-k}\end{array} \right)$，可得<br>\begin{align}<br>H=\sum_k \phi^{\dagger} M \phi - \sum_k \eta_k + \frac{V}{g}|\Delta|^2<br>\end{align}</p>
-<p>\begin{align}<br>M=\left( \begin{matrix}<br>\eta_k&amp;-\Delta\\<br>-\Delta^*&amp;-\eta_k<br>\end{matrix} \right)<br>\end{align}</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">M=&#123;&#123;\eta_k,-\Delta&#125;,&#123;-\Delta^*,-\eta_k&#125;&#125;;</span><br><span class="line"><span class="keyword">Eigenvalues</span>[M]</span><br><span class="line"><span class="keyword">Eigenvectors</span>[M]</span><br><span class="line">Q = <span class="keyword">Eigenvectors</span>[M];</span><br><span class="line"><span class="keyword">MatrixForm</span>[<span class="keyword">Inverse</span>[<span class="keyword">Transpose</span>[Q]].M.<span class="keyword">Transpose</span>[Q]] // <span class="keyword">Simplify</span></span><br></pre></td></tr></table></figure>
+        <h3 id="量子多体理论：非对角长程序"><a href="#量子多体理论：非对角长程序" class="headerlink" title="量子多体理论：非对角长程序"></a>量子多体理论：非对角长程序</h3><a id="more"></a>
+<p>Author：$\textbf{Tom Gao}$</p>
+<p>杨振宁指出超流、超导具有长程序，鉴于使用约化密度矩阵手段去刻画时发现其特征就是长程的非对角元不消失，<br>因此称为是一种非对角长程序（Off diagonal long-range order：ODLRO）。<br>不同于晶体中原子排列的对角长程序，非对角长程序完全是量子效应导致的，不能在经典力学中找到对应。<br>非对角长程序只能存在于气态或液态中，如固体中由导电的电子气系统以及一些量子液体中也能发现。<br>在绝缘材料中，电荷的涨落完全被抑制，非对角长程序不能存在，然而这并不排斥非对角长程序与对角长程序共存的可能性。</p>
+<p>密度矩阵算符为：<br>\begin{align}<br>\hat{\rho}&amp;=\frac{1}{Z}e^{-\beta H}\\\\<br>Z&amp;=\text{Tr}\;e^{-\beta H}=\sum_i\langle i|e^{-\beta H}|i\rangle=\sum_i e^{-\beta E_i}<br>\end{align}</p>
+<p>单粒子约化密度矩阵为<br>$$<br>\langle r|\hat\rho_1|r’\rangle=\rho_1 (r,r’)=\langle \hat\psi^\dagger (r) \hat\psi (r’)\rangle<br>$$<br>双粒子约化密度矩阵<br>$$<br>\langle r_1 r_2|\hat{\rho}_2|r’_1 r’_2\rangle=\rho_2(r_1 ,r’_1,r_2 , r’_2)=\langle\psi^\dagger (r_1)\psi^\dagger (r’_1)\psi (r_2)\psi (r’_2)\rangle<br>$$<br>非对角长程序的数学定义为约化密度矩阵（也即关联函数）长程不为零 $\lim_{|r-r’|\to \infty}  \rho_1(r,r’) \neq 0$。</p>
+<p>例如理想玻色气体系统，计算其单粒子约化密度矩阵：<br>\begin{align}<br>\rho_1(\mathbf{r},\mathbf{r}’)&amp;=\langle a^\dagger(\mathbf{r}) a(\mathbf{r}’)\rangle\\\\<br>&amp;=V^{-1}\sum_{\mathbf{k},\mathbf{k}’}\langle a_\mathbf{k}^\dagger a_\mathbf{k’}\rangle e^{-i(\mathbf{k}\cdot\mathbf{r}-\mathbf{k’}\mathbf{r’})}=V^{-1}\sum_\mathbf{k}\langle a_\mathbf{k}^\dagger a_\mathbf{k}\rangle e^{-i\mathbf{k}\cdot(\mathbf{r}-\mathbf{r’})}\\\\<br>&amp;=V^{-1}\sum_\mathbf{k} n_\mathbf{k}e^{-i\mathbf{k}\cdot(\mathbf{r}-\mathbf{r’})}\Rightarrow\hat{\rho}_1=\sum_\mathbf{k} n_\mathbf{k}|\mathbf{k}\rangle\langle\mathbf{k}|<br>\end{align}<br>可见单粒子约化密度算符在动量空间中是对角的。</p>
+<p>由于$n_\mathbf{k}=\frac{1}{z^{-1} e^{\beta \varepsilon_k}-1}$ ，在临界温度以下零动量凝聚态上的粒子数是 $N_0=\frac{1}{z^{-1}-1}\xrightarrow{T&lt; T_c}N\Big[1-\big(\frac{T}{T_c}\big)^{3/2}\Big]$ ,故粒子数分布为凝聚部分加非凝聚部分（正常的平滑玻色分布）： $n_\mathbf{k}=N_0\delta_{\mathbf{k},\mathbf{k}_0}+f(\mathbf{k})$ 。完成动量求和（对$k$积分）<br>$$<br>\rho_1(\mathbf{r},\mathbf{r’})=\frac{N_0}{V}+\frac{2}{(2\pi)^3}\int d^3k\;e^{-i\mathbf{k}\cdot(\mathbf{r}-\mathbf{r’})}<br>$$<br>$$<br>\rho_1(\mathbf{r},\mathbf{r’})=\frac{N_0}{V}+\frac{\pi}{\lambda^2}\frac{\large{e}^{-|\mathbf{r}-\mathbf{r’}|/a}}{|\mathbf{r}-\mathbf{r}’|}\;\;\;,\;\;\;|\mathbf{r}-\mathbf{r}’|\gg a=4\pi\lambda|\ln z|^{-1/2}\;\;\;,\;\;\;|\ln z|\sim N_0^{-1}<br>$$<br>$$<br>\lim_{|\mathbf{r}-\mathbf{r}’|\to\infty}\rho_1(\mathbf{r},\mathbf{r}’)=\frac{N_0}{V}<br>$$<br>因此BEC具有非对角长程序。</p>
+<p>存在相互作用的玻色系统就会在低于临界温度时成为超流体，同样计算两点关联函数<br>$$<br>\lim_{|r-r’|\to \infty}  \rho_1(r,r’)=\langle \hat\psi(r) \rangle^{*} \langle\hat\psi (r’)\rangle<br>$$<br>当 $\langle\hat\psi (r)\rangle \neq 0$时， $U(1)$ 对称性（ $\hat\psi (r)\to e^{i\theta} \hat\psi (r)$ ）将自发破缺，这是因为一般具有 $U(1)$ 对称性的哈密顿量在 $\hat \psi^{\dagger}\to e^{-i\theta} \hat \psi^{\dagger}$ 变换下不变，那么通常具有对称性的系统有 $\langle \hat \psi\rangle=\langle \hat \psi^2\rangle=…=0$。 若 $\langle \hat \psi\rangle\neq 0$，这意味着对称破缺了。而之所以称这样的破缺方式是“自发的”，因为数学形式上哈密顿量并没有破坏对称性， 而是系统基态使之破坏了。<br>在各向同性均匀（平移对称性）系统中 $\langle\hat\psi (r)\rangle$ 与 $r$ 独立，并且$n_0=\langle \hat\psi(r) \rangle^{*} \langle\hat\psi (r’)\rangle$   ($\langle \hat\psi(r) \rangle\varpropto\sqrt{\rho_s} e^{i\theta}$，$\theta$为BEC相干相位) 定义了Bose-Einstein凝聚态的凝聚密度。因此我们可以知道当系统没有BEC长程关联，凝聚密度就会为零，这样就没有非对角长程序了。<br>$$$$<br>理想费米子气体系统<br>\begin{align}<br>\rho_1(\mathbf{r},\mathbf{r}’)&amp;=\langle c^\dagger(\mathbf{r})c(\mathbf{r}’)\rangle\\\\<br>&amp;=V^{-1}\sum_{\mathbf{k},\mathbf{k}’}\langle c_\mathbf{k}^\dagger c_\mathbf{k’}\rangle e^{-i(\mathbf{k}\cdot\mathbf{r}-\mathbf{k’}\mathbf{r’})}=V^{-1}\sum_\mathbf{k}\langle c_\mathbf{k}^\dagger c_\mathbf{k}\rangle e^{-i\mathbf{k}\cdot(\mathbf{r}-\mathbf{r’})}\\\\<br>&amp;=V^{-1}\sum_\mathbf{k} n_\mathbf{k}e^{-i\mathbf{k}\cdot(\mathbf{r}-\mathbf{r’})}\Rightarrow\hat{\rho}_1=\sum_\mathbf{k} n_\mathbf{k}|\mathbf{k}\rangle\langle\mathbf{k}|<br>\end{align}<br>零温时<br>\begin{align}<br>\rho_1(\mathbf{r},\mathbf{r}’)&amp;=\frac{1}{V}\sum_{k&lt; k_F} e^{-i\mathbf{k}\cdot(\mathbf{r}-\mathbf{r’})}\\\\<br>&amp;=\frac{1}{(2\pi)^2}\int_0^{k_F}\int_0^\pi e^{ikR\cos\theta}\sin\theta\;d\theta\\\\<br>&amp;=\frac{N}{V}\frac{3\Big(\sin(k_F|\mathbf{r}-\mathbf{r’}|)-k_F|\mathbf{r}-\mathbf{r’}|\cos(k_F|\mathbf{r}-\mathbf{r’}|)\Big)}{(k_F|\mathbf{r}-\mathbf{r’}|)^3}<br>\end{align}<br>零温下费米气体出现Friedel振荡，并且可以看到这系统里面没有非对角长程序。</p>
+<p>再考虑相互作用费米子系统，低温下变成费米液体，也出现Friedel振荡，<br>\begin{align}<br>\rho(R)&amp;=-\frac{1}{\epsilon _0}\cdot \frac{Q_0}{e}\cdot \frac{1}{(2\pi )^3}\int \Big(1-\frac{1}{\epsilon _1(\mathbf{q},0)}\Big)e^{i\mathbf{q}\cdot \mathbf{R}}d^3\mathbf{q}\\\\<br>\epsilon _1(\mathbf{q},0)&amp;=1+\frac{\lambda ^2}{q^2}S \left(\frac{q}{k_F}\right)\\\\<br>S\left(\frac{q}{k_F}\right)&amp;=\frac{8E_F}{3N}\sum _k \frac{1}{E_{k+q}-E_k},S(x)\equiv \frac{1}{2}\left(1+\frac{1-x^2}{2x}\ln \left|\frac{1-x}{1+x}\right|\right)<br>\end{align}<br>在 $r\to +\infty$ ，密度矩阵渐进为<br>$$<br>\rho(r,r’)\sim\frac{\cos \left(2k_F|\mathit{r-r’}|\right)}{\mathit{r}^3}\text{  }<br>$$<br>费米液体系统同样也不具有非对角长程序。</p>
+<p>为了在费米系统中实现BEC，必须有机制使得费米子玻色化。 超导系统中电子对组成复合玻色准粒子，低温下也实现类似玻色系统的凝聚态（相干态）。这时需要怎样计算显示出其非对角长程序？<br>费米子算符为<br>\begin{align}<br>\psi_\sigma(\mathbf{r})&amp;=\frac{1}{\sqrt{V}}\sum_\mathbf{k}e^{i\mathbf{k}\cdot\mathbf{r}}c_{\sigma}(\mathbf{k})\\\\<br>\psi_\sigma^\dagger(\mathbf{r})&amp;=\frac{1}{\sqrt{V}}\sum_\mathbf{k}e^{-i\mathbf{k}\cdot\mathbf{r}}c_{\sigma}^\dagger(\mathbf{k})<br>\end{align}}<br>若直接简单地进行对玻色化映射后有<br>$$<br>\phi^\dagger(\mathbf{R})=\int d^3r\varphi(r)\psi_{\uparrow}^\dagger(\mathbf{R}+\mathbf{r}/2)\psi_{\downarrow}^\dagger(\mathbf{R}-\mathbf{r}/2)<br>$$<br>可以验证实际上这并不是一个真正意义上的玻色子算符,只在长距离$|\mathbf{R}-\mathbf{R}’|\to\infty$时才满足对易关系，这根本无法使得电子对波函数重叠因而与实际情况矛盾。</p>
+<p>不过我们从中受到启发，在超导系统里面用的是Cooper对的$\rho_1$来刻画非对角长程序(假设我们已经找到了这样的玻色算符)<br>$$<br>\rho_1(\mathbf{R}-\mathbf{R}’)=\langle\phi^\dagger(\mathbf{R})\phi(\mathbf{R}’)\rangle<br>$$<br>类比于超流体， $|\mathbf{R}-\mathbf{R}’|\to\infty$ 有 $\rho_1(\mathbf{R}-\mathbf{R}’)\sim\langle\phi^\dagger(\mathbf{R})\rangle\langle\phi(\mathbf{R’})\rangle$ ，这实际上就是Ginzburg-Landau宏观波函数（序参量）$\Psi(\mathbf{R})=\langle\phi(\mathbf{R})\rangle$。</p>
+<p>于是实际上应该对电子构造四点关联函数：<br>$$<br>\rho(\mathbf{r}_1,\mathbf{r}_2,\mathbf{r}_3,\mathbf{r}_4)=<br>\langle \psi_{\sigma_1}^\dagger(\mathbf{r}_1)\psi_{\sigma_2}^\dagger(\mathbf{r}_2)\psi_{\sigma_3}(\mathbf{r}_3)\psi_{\sigma_4}(\mathbf{r}_4)\rangle<br>$$<br>由Hatree近似得到<br>$$<br>\langle \psi_{\uparrow}^\dagger(\mathbf{r}_1)\psi_{\downarrow}^\dagger(\mathbf{r}_2)\psi_{\uparrow}(\mathbf{r}_2’)\psi_{\downarrow}(\mathbf{r}_1’)\rangle<br>\approx\langle\psi_{\uparrow}^\dagger(\mathbf{r}_1)\psi_{\downarrow}(\mathbf{r}_1’)\rangle\langle\psi_{\downarrow}^\dagger(\mathbf{r}_2)\psi_{\uparrow}(\mathbf{r}_2’)\rangle<br>$$<br>对于S波超导有($r=|\mathbf{r}-\mathbf{r}’|$)<br>\begin{align}<br>\Delta(r)&amp;=g\langle\psi_{\uparrow}^\dagger(\mathbf{r})\psi_{\downarrow}(\mathbf{r}’)\rangle\\\\<br>\Delta^*(r)&amp;=g^*\langle\psi_{\downarrow}^\dagger(\mathbf{r})\psi_{\uparrow}(\mathbf{r}’)\rangle\\\\<br>\end{align}</p>
+<p>因此关联函数（双粒子密度矩阵）为<br>$$<br>\rho_2(\mathbf{r},\mathbf{r}’)=|\Delta(r)|^2/g^2\sim e^{-\frac{2}{gN_0}}<br>$$<br>$N_0$正是凝聚态粒子数，无论两对电子各自质心位置相距多远，关联都不为零，即在空间某处湮灭两个电子，在空间很远的另一处产生两个电子的关联函数值不随这两处距离的增加而减小。因此可见和超流体一样，只要凝聚态存在就会具有非对角长程序。</p>
+<p>Hohenberg证明了有限温度下严格的一维、二维Bose和Fermi液体不存在非对角长程序，因此也不能发生连续对称性自发破缺——Mermin-Wagner定理（但要注意BEC依然可以在低维情况下发生）。然而低维超流体与普通流体依旧不同，具有准非对角（代数）长程序： $\lim_{|r-r’|\to \infty} \rho_1(r,r’)\to\frac{1}{|r-r’|^\alpha}$，$\alpha&gt;0$；相比之下，普通流体的关联函数则是随着距离指数型衰减。一个例子就是2D的强关联电子系统形成的FQHE。</p>
+<p>描述FQH态的基态波函数是Laughlin波函数<br>$$<br>\Psi_m(z_1,z_2,…,z_N)=\prod_{j&lt; k}|z_j-z_k|^m\exp\Big[-\frac{1}{4}\sum_l |z_l|^2\Big]<br>$$<br>通过等离子体类比，可确定FQH态长程行为。 $e^{\frac{m}{2}\ln|z-z’|}\rho(z,z’)$ 正比于描述受到等离子背景屏蔽的一个处于某$z_j$处带-1电荷以及位于固定位置$z,z’$带-1/2电荷的杂质的经典Coulomb作用系统的配分函数。</p>
+<p>那么非对角单粒子约化矩阵元为<br>$$<br>\rho_1(z,z’)=\mathcal{N}\frac{\int d^2z_2,…,d^2z_N\Psi^*_m(z,z_2,…,z_N)\Psi’_m(z’,z_2,…,z_N)}{\int d^2z_1,…,d^2z_N\Psi^*_m(z_1,z_2,…,z_N)\Psi’_m(z_1,z_2,…,z_N)}<br>$$<br>长程极限下 $|z-z’|\to\infty$，$\rho(z,z’)\sim|z-z’|^{-m/2}$ 揭示了系统具有代数长程序。</p>
 
       
     </div>
@@ -399,9 +407,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Quantum-Theory/" rel="tag"># Quantum Theory</a>
-          
             <a href="/tags/Solid-State-Physics/" rel="tag"># Solid State Physics</a>
+          
+            <a href="/tags/Quantum-Theory-of-Fields/" rel="tag"># Quantum Theory of Fields</a>
+          
+            <a href="/tags/Superconductivity/" rel="tag"># Superconductivity</a>
           
         </div>
       
@@ -414,8 +424,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/22/Path Integral/" rel="next" title="路径积分专题">
-                <i class="fa fa-chevron-left"></i> 路径积分专题
+              <a href="/2018/04/28/转载的学习笔记（自用）/" rel="next" title="转载的学习笔记（自用）">
+                <i class="fa fa-chevron-left"></i> 转载的学习笔记（自用）
               </a>
             
           </div>
@@ -424,8 +434,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/28/转载的学习笔记（自用）/" rel="prev" title="转载的学习笔记（自用）">
-                转载的学习笔记（自用） <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/28/量子多体理论：超导理论/" rel="prev" title="转载的学习笔记（一）">
+                转载的学习笔记（一） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -578,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#中岛变换的技巧"><span class="nav-number">1.</span> <span class="nav-text">中岛变换的技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BCS哈密顿量的对角化"><span class="nav-number">2.</span> <span class="nav-text">BCS哈密顿量的对角化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#量子多体理论：非对角长程序"><span class="nav-number">1.</span> <span class="nav-text">量子多体理论：非对角长程序</span></a></li></ol></div>
             
 
           </div>
